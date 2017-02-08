@@ -3,6 +3,8 @@ import itertools
 import os
 import csv
 
+#This is for training data source code so I collected 2011~2014 data humidity and rainfall
+
 def folderHumidityRead():
     humidityFile = []
     for (path, dir, files) in os.walk("C:/Users/dw/Desktop/urbaneco/humidity/"):
