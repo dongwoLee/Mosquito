@@ -1,34 +1,29 @@
 import tensorflow as tf
 import csv,os
 
-#This is for training Data so I collected 2011~2014 catch_mosquito data
+#This is for processing about outlier data
 
-def folderMosquitoRead():
-    MosquitoFile = []
-    for (path, dir, files) in os.walk("C:/Users/dw/Desktop/urbaneco/catch_mosquito/AllData/"):
-        for filename in files:
-            ext = os.path.splitext(filename)[-1]
-            if ext == '.csv':
-                fileName = (str(path)+str(filename))
-                MosquitoFile.append(fileName)
+def outLierProcess(file):
 
-    return MosquitoFile
+    newMosquito = []
+    f = open(file,"r")
+    original = csv.reader(f)
 
-def readMosquito(mList):
-    CntMosquito = []
-    resCntMosquito = []
-    for i in range(len(mList)):
-        yearMosquitoList = open(mList[i],'r')
-        csvReader = csv.reader(yearMosquitoList)
+    for row in original:
+        newMosquito.append(row)
 
-        for row in csvReader:
-            CntMosquito.append(row)
+    for i in range(len(newMosquito)-2):
+        if(abs(float(newMosquito[i+1][1])-float(newMosquito[i][1]))>=300):
+            (newMosquito[i+1][1])=str((float(newMosquito[i][1])+float(newMosquito[i+2][1]))/2)
+        else:
+            continue
 
-    return CntMosquito
+    myfile = open("C:/Users/dw/Desktop/urbaneco/mosquito_result/result_2014_윤중초등학교_모기포집.csv", "w")
+    wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
+    wr.writerow(newMosquito)
 
-def groupingMosquito()
 
 if __name__ == '__main__':
-    print ((readMosquito(folderMosquitoRead())))
+    outLierProcess("C:/Users/dw/Desktop/urbaneco/catch_mosquito/AllData/2014_윤중초등학교_모기포집.csv")
 
 
