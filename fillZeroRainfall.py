@@ -76,7 +76,7 @@ def fillZeroRainFall(hList,rList):
     return lastRainFall
 
 def saveCsv(list):
-    myfile = open("C:/Users/dw/Desktop/urbaneco/result/resRainFall.csv", "w")
+    myfile = open("C:/Users/dw/Desktop/urbaneco/result_factor_data/resRainFall.csv", "w")
     wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
     wr.writerow(list)
 

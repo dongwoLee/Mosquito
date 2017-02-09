@@ -19,7 +19,7 @@ def huminityRead(huminityList):
         else:
             humidityResult.append(float(humidity[j][1]))
 
-    myfile = open("C:/Users/dw/Desktop/urbaneco/humidity/resHumidity.csv","w")
+    myfile = open("C:/Users/dw/Desktop/urbaneco/result_factor_data/resTemperature.min.csv","w")
     wr = csv.writer(myfile,quoting=csv.QUOTE_ALL)
     wr.writerow(humidityResult)
 
@@ -27,7 +27,7 @@ def huminityRead(huminityList):
 
 def folderHumidityRead():
     humidityFile = []
-    for (path, dir, files) in os.walk("C:/Users/dw/Desktop/urbaneco/humidity/"):
+    for (path, dir, files) in os.walk("C:/Users/dw/Desktop/urbaneco/temperature.min/"):
         for filename in files:
             ext = os.path.splitext(filename)[-1]
             if ext == '.csv':
