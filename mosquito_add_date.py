@@ -20,6 +20,20 @@ def folderMosquitoRead():
 
     return AllMosquitoData
 
+def collectAllData(mData):
+    collectMosqutioData = []
+
+    for i in range(len(mData)):
+        if(i%2==0):
+            for j in range(len(mData[i])):
+                if(int(mData[i][j][8])>=1 and int(mData[i][j][8])<=4):
+                    continue
+                else:
+                    collectMosqutioData.append(mData[i][j])
+
+    return (collectMosqutioData)
+
 
 if __name__ == '__main__':
-    print (folderMosquitoRead())
+    #print (folderMosquitoRead())
+    print (collectAllData(folderMosquitoRead()))
