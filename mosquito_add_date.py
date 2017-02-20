@@ -33,7 +33,10 @@ def collectAllData(mData):
 
     return (collectMosqutioData)
 
+def classifyMosquito(rawData):
+
+    return
+
 
 if __name__ == '__main__':
-    #print (folderMosquitoRead())
-    print (collectAllData(folderMosquitoRead()))
+    print (classifyMosquito(collectAllData(folderMosquitoRead())))
