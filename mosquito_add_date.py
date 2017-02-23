@@ -33,10 +33,20 @@ def collectAllData(mData):
 
     return (collectMosqutioData)
 
-def classifyMosquito(rawData):
-
-    return
-
-
 if __name__ == '__main__':
-    print (classifyMosquito(collectAllData(folderMosquitoRead())))
+    data_2011 = []
+    data_2012 = []
+    data_2013 = []
+    data_2014 = []
+
+    rawData = (collectAllData(folderMosquitoRead()))
+
+    for i in range(len(rawData)):
+        if(rawData[i][5]=='1'):
+            data_2011.append(rawData[i])
+        elif(rawData[i][5]=='2'):
+            data_2012.append(rawData[i])
+        elif (rawData[i][5] == '3'):
+            data_2013.append(rawData[i])
+        elif (rawData[i][5] == '4'):
+            data_2014.append(rawData[i])
