@@ -1,5 +1,6 @@
 import csv
 import os
+import datetime, time
 
 def folderMosquitoRead():
     mosquitoFile = []
@@ -36,10 +37,22 @@ def collectAllData(mData):
 def classifyByData(yearData):
 
     #All the years consist of 184 dates from May 1 to October 31
+    #dictionary
+
     dataEachYear = [0]*184
+    May = [0]*31
+    June = [0]*30
+    July = [0]*31
+    August = [0]*31
+    September = [0]*30
+    October = [0]*31
+
     for i in range(len(yearData)):
-
-
+        if(yearData[i][8]=='5'):
+            for j in range(0,32):
+                temp = yearData[i][10]+yearData[i][11] # int("01") -> 1
+                if (j==temp):
+                    return
 
 if __name__ == '__main__':
     data_2011 = []
@@ -59,7 +72,8 @@ if __name__ == '__main__':
         elif (rawData[i][5] == '4'):
             data_2014.append(rawData[i])
 
+    l = data_2011[15].split()
+    print (l[0][2:]) # date
+    print (float(l[3][0:len(l[3])-2])) #rainfall
 
-    print (classifyByData(data_2011))
-    """l = data_2011[14].split()
-    print (float(l[3][0:len(l[3])-2]))"""
+    #Please make dictionary
