@@ -4,7 +4,7 @@ import os
 def folderMosquitoRead():
     mosquitoFile = []
     AllMosquitoData = []
-    for (path, dir, files) in os.walk("C:/Users/dw/mosquito_predict/result_mosquito_data/"):
+    for (path, dir, files) in os.walk("C:/Users/dw/Desktop/Mosquito/Mosquito/result_mosquito_data/"):
         for filename in files:
             ext = os.path.splitext(filename)[-1]
             if ext == '.csv':
@@ -33,6 +33,14 @@ def collectAllData(mData):
 
     return (collectMosqutioData)
 
+def classifyByData(yearData):
+
+    #All the years consist of 184 dates from May 1 to October 31
+    dataEachYear = [0]*184
+    for i in range(len(yearData)):
+
+
+
 if __name__ == '__main__':
     data_2011 = []
     data_2012 = []
@@ -50,3 +58,8 @@ if __name__ == '__main__':
             data_2013.append(rawData[i])
         elif (rawData[i][5] == '4'):
             data_2014.append(rawData[i])
+
+
+    print (classifyByData(data_2011))
+    """l = data_2011[14].split()
+    print (float(l[3][0:len(l[3])-2]))"""
