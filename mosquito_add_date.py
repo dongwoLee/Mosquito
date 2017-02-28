@@ -39,7 +39,7 @@ def classifyByData(yearData):
     #All the years consist of 184 dates from May 1 to October 31
     #dictionary
 
-    dataEachYear = [0]*184
+    MayToOctober = [0]*184
     May = [0]*31
     June = [0]*30
     July = [0]*31
@@ -47,12 +47,29 @@ def classifyByData(yearData):
     September = [0]*30
     October = [0]*31
 
+    date_list = []
+    mosquito_list = []
+
+    m_dict = {}
     for i in range(len(yearData)):
-        if(yearData[i][8]=='5'):
-            for j in range(0,32):
-                temp = yearData[i][10]+yearData[i][11] # int("01") -> 1
-                if (j==temp):
-                    return
+        l = yearData[i].split()
+        date = l[0][2:]
+        mosquito = (l[-1][:-2])
+        if(mosquito[0] == "'"):
+            mosquito = mosquito[1:]
+        date_list.append(date)
+        mosquito_list.append(mosquito)
+        print (date+" "+mosquito)
+
+    for i in range(len(date_list)):
+        mCnt=0.0
+        for j in range(len(date_list)):
+            if(date_list[i]==date_list[j]):
+                mCnt += float(mosquito_list[i])
+
+    """m_dict=dict(zip(date_list,mosquito_list))
+    print (len(m_dict))"""
+
 
 if __name__ == '__main__':
     data_2011 = []
@@ -72,8 +89,9 @@ if __name__ == '__main__':
         elif (rawData[i][5] == '4'):
             data_2014.append(rawData[i])
 
-    l = data_2011[15].split()
-    print (l[0][2:]) # date
-    print (float(l[3][0:len(l[3])-2])) #rainfall
+    classifyByData(data_2011)
 
-    #Please make dictionary
+    """l = data_2011[248].split()
+    print (l) # date
+    print (float(l[3][0:len(l[3])-3])) #rainfall"""
+
