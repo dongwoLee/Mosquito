@@ -1,6 +1,7 @@
 import csv
 import os
 import datetime, time
+from collections import OrderedDict
 
 def folderMosquitoRead():
     mosquitoFile = []
@@ -36,21 +37,9 @@ def collectAllData(mData):
 
 def classifyByData(yearData):
 
-    #All the years consist of 184 dates from May 1 to October 31
-    #dictionary
-
-    MayToOctober = [0]*184
-    May = [0]*31
-    June = [0]*30
-    July = [0]*31
-    August = [0]*31
-    September = [0]*30
-    October = [0]*31
-
     date_list = []
     mosquito_list = []
-
-    m_dict = {}
+    resultMos = []
     for i in range(len(yearData)):
         l = yearData[i].split()
         date = l[0][2:]
@@ -59,17 +48,16 @@ def classifyByData(yearData):
             mosquito = mosquito[1:]
         date_list.append(date)
         mosquito_list.append(mosquito)
-        print (date+" "+mosquito)
 
-    for i in range(len(date_list)):
-        mCnt=0.0
-        for j in range(len(date_list)):
-            if(date_list[i]==date_list[j]):
-                mCnt += float(mosquito_list[i])
-
-    """m_dict=dict(zip(date_list,mosquito_list))
-    print (len(m_dict))"""
-
+    d_list = list(OrderedDict.fromkeys(date_list))
+    d_list.remove(d_list[-1])
+    for j in range(len(d_list)):
+        cnt = 0
+        mCnt = 0
+        for k in range(len(date_list)):
+            if(d_list[j][5:10]==date_list[k][5:10]):
+                cnt+=1
+                mCnt += float()
 
 if __name__ == '__main__':
     data_2011 = []
