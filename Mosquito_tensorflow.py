@@ -1,4 +1,4 @@
-
+import tensorflow as tf
 import csv
 
 def readCsvToList(file):
@@ -23,8 +23,27 @@ if __name__ == '__main__':
     temperatureAvgList = (makeList(readCsvToList("C:/Users/dw/Desktop/Mosquito/Mosquito/temperature.avg_result.csv")))
     mosquitoList = (makeList(readCsvToList("C:/Users/dw/Desktop/Mosquito/Mosquito/mosquito_result.csv")))
 
-    print (humidityList)
-    print (temperatureMaxList)
-    print (temperatureAvgList)
-    print (temperatureMinList)
-    print (mosquitoList)
+    W1= tf.Variable(tf.random_uniform([1],-1.0,1.0))
+    W2 = tf.Variable(tf.random_uniform([1], -1.0, 1.0))
+    W3 = tf.Variable(tf.random_uniform([1], -1.0, 1.0))
+    W4 = tf.Variable(tf.random_uniform([1], -1.0, 1.0))
+
+    b = tf.Variable(tf.random_uniform([1], -1.0, 1.0))
+
+    hypothesis = W1 * humidityList + W2 * temperatureMaxList + W3 * temperatureAvgList + W4 * temperatureMinList + b
+
+    cost = tf.reduce_mean(tf.square(hypothesis-mosquitoList))
+
+    learning_rate = 0.01
+
+    optimizer = tf.train.AdamOptimizer(learning_rate)
+    train = optimizer.minimize(cost)
+
+    init = tf.global_variables_initializer()
+    sess = tf.Session()
+    sess.run(init)
+
+    for step in range(100001):
+        sess.run(train)
+        if step%100 == 0:
+            print (step,sess.run(cost),sess.run(W1),sess.run(W2),sess.run(W3),sess.run(W4),sess.run(b))
