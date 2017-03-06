@@ -50,14 +50,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Mosquito_tensorflow.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Mosquito_tensorflow.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Mosquito_tensorflow.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="38" column="24" lean-forward="false" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+            <state relative-caret-position="220">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="16" selection-end-column="19" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="compare_2015.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/compare_2015.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="638">
+              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Factor_dataCsv_save.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Factor_dataCsv_save.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="19" selection-end-column="56" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -97,12 +117,13 @@
         <option value="$PROJECT_DIR$/mosquito_add_date.py" />
         <option value="$PROJECT_DIR$/readCsv.py" />
         <option value="$PROJECT_DIR$/Mosquito_tensorflow.py" />
+        <option value="$PROJECT_DIR$/compare_2015.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1632" />
-    <option name="y" value="62" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -151,24 +172,7 @@
       <recent name="C:\Users\dw\mosquito_predict" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Mosquito_tensorflow">
-    <configuration default="false" name="fillZeroRainfall" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="mosquito_predict" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fillZeroRainfall.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.compare_2015">
     <configuration default="false" name="mosquito_add_date" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -238,6 +242,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="mosquito_predict" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Mosquito_tensorflow.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="compare_2015" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="mosquito_predict" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/compare_2015.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -377,19 +398,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.fillZeroRainfall" />
-      <item index="1" class="java.lang.String" itemvalue="Python.mosquito_add_date" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in mosquito_predict" />
-      <item index="3" class="java.lang.String" itemvalue="Python.readCsv" />
-      <item index="4" class="java.lang.String" itemvalue="Python.Mosquito_tensorflow" />
+      <item index="0" class="java.lang.String" itemvalue="Python.mosquito_add_date" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in mosquito_predict" />
+      <item index="2" class="java.lang.String" itemvalue="Python.readCsv" />
+      <item index="3" class="java.lang.String" itemvalue="Python.Mosquito_tensorflow" />
+      <item index="4" class="java.lang.String" itemvalue="Python.compare_2015" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.Mosquito_tensorflow" />
-        <item index="1" class="java.lang.String" itemvalue="Python.readCsv" />
-        <item index="2" class="java.lang.String" itemvalue="Python.mosquito_add_date" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in mosquito_predict" />
-        <item index="4" class="java.lang.String" itemvalue="Python.fillZeroRainfall" />
+        <item index="0" class="java.lang.String" itemvalue="Python.compare_2015" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Mosquito_tensorflow" />
+        <item index="2" class="java.lang.String" itemvalue="Python.readCsv" />
+        <item index="3" class="java.lang.String" itemvalue="Python.mosquito_add_date" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in mosquito_predict" />
       </list>
     </recent_temporary>
   </component>
@@ -421,15 +442,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1632" y="62" width="1936" height="1056" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23839663" sideWeight="0.50416666" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23839663" sideWeight="0.49583334" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23839663" sideWeight="0.49583334" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -453,13 +474,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Factor_dataCsv_save.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mosquito_sample.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -716,13 +730,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Factor_dataCsv_save.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="19" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/result_mosquito_data/result_2011_양평빗물펌프장_모기포집.csv" />
     <entry file="file://$PROJECT_DIR$/result_mosquito_data/result_2011_신일어린이집_모기포집.csv" />
     <entry file="file://$PROJECT_DIR$/result_factor_data/resHumidity.csv" />
@@ -753,13 +760,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Factor_dataCsv_save.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="19" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Mosquito_tensorflow.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="38" column="24" lean-forward="false" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+        <state relative-caret-position="220">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="16" selection-end-column="19" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compare_2015.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
