@@ -17,12 +17,12 @@ def makeList(fList):
     return (factor)
 
 if __name__ == '__main__':
-    humidityList = (makeList(readCsvToList("C:/Users/dw/Desktop/Mosquito/Mosquito/humidity_result.csv")))
-    rainFallList = makeList(readCsvToList("C:/Users/dw/Desktop/Mosquito/Mosquito/rainfall_result.csv"))
-    temperatureMaxList = (makeList(readCsvToList("C:/Users/dw/Desktop/Mosquito/Mosquito/temperature.max_result.csv")))
-    temperatureMinList = (makeList(readCsvToList("C:/Users/dw/Desktop/Mosquito/Mosquito/temperature.min_result.csv")))
-    temperatureAvgList = (makeList(readCsvToList("C:/Users/dw/Desktop/Mosquito/Mosquito/temperature.avg_result.csv")))
-    mosquitoList = (makeList(readCsvToList("C:/Users/dw/Desktop/Mosquito/Mosquito/mosquito_result.csv")))
+    humidityList = (makeList(readCsvToList("C:/Users/dw/Desktop/Mosquito/Mosquito/mosquito_factor_data/humidity_result.csv")))
+    rainFallList = makeList(readCsvToList("C:/Users/dw/Desktop/Mosquito/Mosquito/mosquito_factor_data/rainfall_result.csv"))
+    temperatureMaxList = (makeList(readCsvToList("C:/Users/dw/Desktop/Mosquito/Mosquito/mosquito_factor_data/temperature.max_result.csv")))
+    temperatureMinList = (makeList(readCsvToList("C:/Users/dw/Desktop/Mosquito/Mosquito/mosquito_factor_data/temperature.min_result.csv")))
+    temperatureAvgList = (makeList(readCsvToList("C:/Users/dw/Desktop/Mosquito/Mosquito/mosquito_factor_data/temperature.avg_result.csv")))
+    mosquitoList = (makeList(readCsvToList("C:/Users/dw/Desktop/Mosquito/Mosquito/average_mosquito_data/mosquito_result.csv")))
 
     W1 = tf.Variable(tf.random_uniform([1],-1.0,1.0))
     W2 = tf.Variable(tf.random_uniform([1],-1.0,1.0))
