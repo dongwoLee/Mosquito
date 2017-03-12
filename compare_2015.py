@@ -1,11 +1,11 @@
 import csv
 
-CONST_W1=0.3566637
-CONST_W2=-2.80135822
-CONST_W3=-102.51014709
-CONST_W4=172.35151672
-CONST_W5=-26.701931
-CONST_b = -252.6374054
+CONST_W1=0.35666299
+CONST_W2=-2.80136108
+CONST_W3=-102.5102005
+CONST_W4=172.35162354
+CONST_W5=-26.7019825
+CONST_b = -252.63739014
 
 def readCsvToList(file):
     with open(file,'r') as f:
@@ -35,6 +35,9 @@ if __name__ == '__main__':
          else:
              real_list.append("4")
 
+     print (real_list)
+
+
      humidity_2015 = (makeList(readCsvToList("C:/Users/dw/Desktop/Mosquito/Mosquito/mosquito_factor_2015/humidity.2015_result.csv")))
      rainfall_2015 = (makeList(readCsvToList("C:/Users/dw/Desktop/Mosquito/Mosquito/mosquito_factor_2015/rainfall.2015_result.csv")))
      temperatureMax_2015 = (makeList(readCsvToList("C:/Users/dw/Desktop/Mosquito/Mosquito/mosquito_factor_2015/temperature.max.2015_result.csv")))
@@ -43,19 +46,21 @@ if __name__ == '__main__':
 
      test_mosquito=[]
 
-     for j in range(len(humidity_2015)):
-        m = CONST_W1*humidity_2015[j]+CONST_W2*rainfall_2015[j]+CONST_W3*temperatureMax_2015[j]+CONST_W4*temperatureAvg_2015[j]+CONST_W5*temperatureMin_2015[j]+CONST_b
-        #test_mosquito.append(m)
-        if (m >= 0 and m <= 20):
-            test_mosquito.append("1")
-        elif (m >= 21 and m <= 40):
-            test_mosquito.append("2")
-        elif (m >= 41 and m <= 80):
-            test_mosquito.append("3")
-        elif (m<0):
-            test_mosquito.append("-1")
-        else:
-            test_mosquito.append("4")
+     for j in range(len(data_2015)):
+         m=CONST_W1 * humidity_2015[j]+CONST_W2*rainfall_2015[j]+CONST_W3*temperatureMax_2015[j]+CONST_W4*temperatureAvg_2015[j]+CONST_W5*temperatureMin_2015[j]+CONST_b
+         if(m>=0 and m<=20):
+             test_mosquito.append("1")
+         elif(m>=21 and m<=40):
+             test_mosquito.append("2")
+         elif(m>=41 and m<=80):
+             test_mosquito.append("3")
+         elif (m < 0):
+             test_mosquito.append("1")
+         else:
+             test_mosquito.append("4")
+
+     print (test_mosquito)
+
 
      cnt = 0
      for k in range(len(real_list)):
