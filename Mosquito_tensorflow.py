@@ -36,7 +36,7 @@ if __name__ == '__main__':
 
     cost = tf.reduce_mean(tf.square(hypothesis-mosquitoList))
 
-    learning_rate = 0.05
+    learning_rate = 0.01
 
     optimizer = tf.train.AdamOptimizer(learning_rate)
     train = optimizer.minimize(cost)
