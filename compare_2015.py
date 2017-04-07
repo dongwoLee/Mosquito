@@ -1,71 +1,64 @@
-import csv
+import numpy as np
 
-CONST_W1=0.35666299
-CONST_W2=-2.80136108
-CONST_W3=-102.5102005
-CONST_W4=172.35162354
-CONST_W5=-26.7019825
-CONST_b = -252.63739014
+xy = np.loadtxt('2015_original_predict.csv',delimiter=',',dtype='float32')
 
-def readCsvToList(file):
-    with open(file,'r') as f:
-        reader = csv.reader(f)
-        mosquito_2015 = list(reader)
+x_data = xy[:,0:1]
 
-    return mosquito_2015
+original = []
+result = []
 
-def makeList(fList):
+for i in range(len(x_data)):
+    if(x_data[i] >= 0 and x_data[i] <=20):
+        original.append("1")
+    elif(x_data[i] > 21 and x_data[i]<=40):
+        original.append("2")
+    elif (x_data[i] > 41 and x_data[i] <= 80):
+        original.append("3")
+    elif (x_data[i] > 81 and x_data[i] <= 160):
+        original.append("4")
+    elif (x_data[i] > 161 and x_data[i] <= 320):
+        original.append("5")
+    elif (x_data[i] > 321 and x_data[i] <= 640):
+        original.append("6")
+    elif (x_data[i] > 641 and x_data[i] <= 1280):
+        original.append("7")
+    else:
+        original.append("8")
 
-    factor = []
-    for i in range(len(fList)):
-        factor.append(float(fList[i][0]))
+print (original)
 
-    return (factor)
+result_data = xy[:,[-1]]
 
-if __name__ == '__main__':
-     data_2015 = (makeList(readCsvToList("C:/Users/dw/Desktop/Mosquito/Mosquito/average_mosquito_2015/2015_mosquito_average.csv")))
-     real_list = []
-     for i in range(len(data_2015)):
-         if(data_2015[i]>=0 and data_2015[i]<=20):
-             real_list.append("1")
-         elif(data_2015[i]>=21 and data_2015[i]<=40):
-             real_list.append("2")
-         elif(data_2015[i]>=41 and data_2015[i]<=80):
-             real_list.append("3")
-         else:
-             real_list.append("4")
+for j in range(len(result_data)):
+    if (result_data[j] >= 0 and result_data[j] <= 20):
+        result.append("1")
+    elif (result_data[j] > 21 and result_data[j] <= 40):
+        result.append("2")
+    elif (result_data[j] > 41 and result_data[j] <= 80):
+        result.append("3")
+    elif (result_data[j] > 81 and result_data[j] <= 160):
+        result.append("4")
+    elif (result_data[j] > 161 and result_data[j] <= 320):
+        result.append("5")
+    elif (result_data[j] > 321 and result_data[j] <= 640):
+        result.append("6")
+    elif (result_data[j] > 641 and result_data[j] <= 1280):
+        result.append("7")
+    elif (result_data[i]<0):
+        result.append("1")
+    else:
+        result.append("8")
 
-     print (real_list)
+gene_cnt = 0
+one_cnt = 0
 
+for k in range(len(x_data)):
+    if((float(original[k])-float(result[k])==0)):
+        gene_cnt+=1
 
-     humidity_2015 = (makeList(readCsvToList("C:/Users/dw/Desktop/Mosquito/Mosquito/mosquito_factor_2015/humidity.2015_result.csv")))
-     rainfall_2015 = (makeList(readCsvToList("C:/Users/dw/Desktop/Mosquito/Mosquito/mosquito_factor_2015/rainfall.2015_result.csv")))
-     temperatureMax_2015 = (makeList(readCsvToList("C:/Users/dw/Desktop/Mosquito/Mosquito/mosquito_factor_2015/temperature.max.2015_result.csv")))
-     temperatureAvg_2015 = (makeList(readCsvToList("C:/Users/dw/Desktop/Mosquito/Mosquito/mosquito_factor_2015/temperature.avg.2015_result.csv")))
-     temperatureMin_2015 = (makeList(readCsvToList("C:/Users/dw/Desktop/Mosquito/Mosquito/mosquito_factor_2015/temperature.min.2015_result.csv")))
+for k in range(len(x_data)):
+    if((abs(float(original[k])-float(result[k]))<=1)):
+        one_cnt+=1
 
-     test_mosquito=[]
-
-     for j in range(len(data_2015)):
-         m=CONST_W1 * humidity_2015[j]+CONST_W2*rainfall_2015[j]+CONST_W3*temperatureMax_2015[j]+CONST_W4*temperatureAvg_2015[j]+CONST_W5*temperatureMin_2015[j]+CONST_b
-         if(m>=0 and m<=20):
-             test_mosquito.append("1")
-         elif(m>=21 and m<=40):
-             test_mosquito.append("2")
-         elif(m>=41 and m<=80):
-             test_mosquito.append("3")
-         elif (m < 0):
-             test_mosquito.append("1")
-         else:
-             test_mosquito.append("4")
-
-     print (test_mosquito)
-
-
-     cnt = 0
-     for k in range(len(real_list)):
-         if(real_list[k]==test_mosquito[k]):
-             cnt +=1
-
-     print (cnt/len(real_list)*100)
-
+print (gene_cnt/len(x_data)*100)
+print (one_cnt/len(x_data)*100)
